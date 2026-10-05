@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Moleculer-based microservices project",
   "scripts": {
-    "dev": "moleculer-runner --repl --hot services/**/*.service.js",
+    "dev": "moleculer-runner --repl --hot --env services/**/*.service.js",
     "start": "moleculer-runner",
     "cli": "moleculer connect ",
     "ci": "jest --watch",
@@ -22,10 +22,11 @@
     "moleculer-repl": "^0.7.3"
   },
   "dependencies": {
-    "moleculer-web": "^0.10.4",
+    "dotenv": "^18.0.5",
+    "moleculer": "^0.14.26",
     "moleculer-db": "^0.8.20",
     "moleculer-db-adapter-mongo": "^0.4.15",
-    "moleculer": "^0.14.26"
+    "moleculer-web": "^0.10.4"
   },
   "engines": {
     "node": ">= 16.x.x"
@@ -37,5 +38,6 @@
     "roots": [
       "../test"
     ]
-  }
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
